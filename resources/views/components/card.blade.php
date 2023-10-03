@@ -16,7 +16,8 @@
 
     @isset($content)
         <div class="p-6 pt-0">
-            {{ $content }}</div>
+            {{ $content }}
+        </div>
     @endisset
 
     @isset($footer)

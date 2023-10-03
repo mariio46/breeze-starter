@@ -1,13 +1,20 @@
 {
-  "singleQuote": true,
-  "plugins": ["@shufo/prettier-plugin-blade"],
-  "overrides": [
-      {
-          "files": ["*.blade.php"],
-          "options": {
-              "parser": "blade",
-              "tabWidth": 4
-          }
-      }
-  ]
+    "plugins": ["@shufo/prettier-plugin-blade"],
+    "overrides": [
+        {
+            "files": ["*.blade.php"],
+            "options": {
+                "parser": "blade",
+                "tabWidth": 4,
+                "printWidth": 200,
+                "wrapAttributes": "auto",
+                "wrapAttributesMinAttrs": 20,
+                "sortTailwindcssClasses": true,
+                "sortHtmlAttributes": "code-guide",
+                "noPhpSyntaxCheck": true,
+                "endWithNewLine": true,
+                "indentInnerHtml": true
+            }
+        }
+    ]
 }

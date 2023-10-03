@@ -4,7 +4,8 @@
             {{ $slot }}
         </div>
 
-        <x-theme-toggle
-            class="fixed bottom-0 right-0 mb-4 mr-8 ml-2 hidden border-0 bg-transparent p-0 text-muted-foreground hover:bg-transparent lg:block" />
+        <div class="fixed bottom-0 right-0 mb-4 mr-4">
+            <x-theme-toggle class="h-[2.7rem] w-[2.7rem]" size="icon" variant="toggle" />
+        </div>
     </main>
 </x-base-layout>

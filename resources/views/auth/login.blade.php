@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-guest-layout title="Login">
     <x-card>
         <x-slot:header>
             <x-slot:title>Login</x-slot:title>
@@ -15,40 +15,24 @@
                 <!-- Email Address -->
                 <div>
                     <x-label for="email" :value="__('Email')" />
-                    <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')"
-                        required autofocus autocomplete="username" />
-                    <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                    <x-input class="mt-1 block w-full" id="email" name="email" type="email" :value="old('email')" required autofocus autocomplete="username" />
+                    <x-input-error class="mt-2" :messages="$errors->get('email')" />
                 </div>
 
                 <!-- Password -->
                 <div class="mt-4">
                     <x-label for="password" :value="__('Password')" />
 
-                    <x-input id="password" class="block mt-1 w-full" type="password" name="password" required
-                        autocomplete="current-password" />
+                    <x-input class="mt-1 block w-full" id="password" name="password" type="password" required autocomplete="current-password" />
 
-                    <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                    <x-input-error class="mt-2" :messages="$errors->get('password')" />
                 </div>
 
-                <!-- Remember Me -->
-                {{-- <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox"
-                    class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-            </label>
-        </div> --}}
-                <div class="mt-4 flex items-center justify-between">
-                    <label for="remember_me" class="inline-flex items-center">
+                <div class="mt-4 flex items-center justify-start">
+                    <label class="inline-flex items-center" for="remember_me">
                         <x-checkbox id="remember_me" name="remember_me" />
                         <span class="ml-2 select-none text-sm text-muted-foreground">{{ __('Remember me') }}</span>
                     </label>
-                    @if (Route::has('password.request'))
-                        <a class="text-sm text-muted-foreground hover:text-foreground"
-                            href="{{ route('password.request') }}" wire:navigate>
-                            {{ __('Forgot your password?') }}
-                        </a>
-                    @endif
                 </div>
 
                 <div class="mt-4 flex items-center justify-end">

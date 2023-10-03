@@ -1,3 +1,8 @@
-<div>
-    <!-- Knowing is not enough; we must apply. Being willing is not enough; we must do. - Leonardo da Vinci -->
-</div>
+<x-app-layout title="Home">
+    <x-slot:header>
+        {{ __('Home Page') }}
+    </x-slot:header>
+    <x-container>
+        {{ __("You're at home") }}
+    </x-container>
+</x-app-layout>
