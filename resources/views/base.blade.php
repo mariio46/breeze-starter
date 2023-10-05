@@ -16,9 +16,6 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-        <!-- Theme Preference -->
-        <script src="{{ asset('js/theme-preference.js') }}"></script>
-
     </head>
 
     <body class="font-sans antialiased">
@@ -27,8 +24,7 @@
         {{ $slot }}
         <!-- /Layout -->
 
-        <!-- Theme Events -->
-        <script src="{{ asset('js/theme.js') }}"></script>
+        {{-- <script src="{{ asset('js/theme.js') }}"></script> --}}
     </body>
 
 </html>

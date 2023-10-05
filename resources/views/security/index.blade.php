@@ -1,4 +1,7 @@
 <x-auth-layout title="Security">
+    <x-slot:header>
+        Security Information
+    </x-slot:header>
     <x-settings-tabs class="max-w-xl">
         <x-card>
             <x-slot:header>

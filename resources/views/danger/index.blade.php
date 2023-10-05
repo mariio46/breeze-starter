@@ -1,4 +1,7 @@
 <x-auth-layout title="Danger">
+    <x-slot:header>
+        Danger Zone
+    </x-slot:header>
     <x-settings-tabs class="max-w-xl">
         <x-card>
             <x-slot:header>

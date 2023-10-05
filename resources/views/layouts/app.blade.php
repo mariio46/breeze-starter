@@ -1,6 +1,7 @@
 <x-base-layout>
     <div class="min-h-screen">
         <x-navigations />
+        <x-side-navigation />
         @isset($header)
             <header class="border-b py-6 shadow-sm sm:py-8 lg:py-12">
                 <x-container>

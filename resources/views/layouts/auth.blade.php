@@ -1,7 +1,8 @@
 <x-base-layout>
     <div class="min-h-screen">
-        <div class="fixed bottom-0 left-0 mb-4 ml-4">
-            <x-theme-toggle class="h-[2.7rem] w-[2.7rem]" size="icon" variant="toggle" />
+        <x-side-navigation />
+        <div class="fixed bottom-0 left-0 mb-2 ml-4 hidden lg:block">
+            <x-theme-toggle class="hidden h-[2.7rem] w-[2.7rem] lg:block" size="icon" variant="toggle" />
         </div>
 
         <div class="mx-auto flex max-w-screen-2xl">
@@ -33,22 +34,12 @@
                     Dashboard
                 </x-aside.link>
                 <x-aside.link :href="route('settings.account')" :active="request()->routeIs('settings.*')">
-                    <x-tabler-settings-2 />
+                    <x-tabler-settings />
                     Settings
-                </x-aside.link>
-                <x-aside.link>
-                    Link-3
-                </x-aside.link>
-                <x-aside.link>
-                    Link-4
-                </x-aside.link>
-                <x-aside.link>
-                    Link-5
                 </x-aside.link>
                 <x-separator />
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
-
                     <x-aside.link :href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">
                         <x-tabler-logout />
                         {{ __('Log Out') }}
@@ -56,6 +47,13 @@
                 </form>
             </x-aside>
             <main class="w-full">
+                @isset($header)
+                    <header class="flex items-center justify-between border-b bg-card px-6 py-4 sm:px-8 sm:py-6">
+                        <h1 class="text-lg font-semibold text-foreground">
+                            {{ $header }}
+                        </h1>
+                    </header>
+                @endisset
                 <div>
                     {{ $slot }}
                 </div>

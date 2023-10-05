@@ -1,6 +1,6 @@
 <div>
-    <div class="mb-1 border-b bg-card">
-        <ul class="-mb-px flex flex-wrap gap-x-3 px-5 pt-8 text-center text-sm font-medium">
+    <div class="mb-1 border-b">
+        <ul class="-mb-px flex flex-wrap gap-x-3 px-5 text-center text-sm font-medium">
             {{ $header }}
         </ul>
     </div>

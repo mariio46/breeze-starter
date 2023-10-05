@@ -1,5 +1,8 @@
 <x-auth-layout title="Dashboard">
-    <div class="px-6 py-10 sm:px-8 sm:py-14">
+    <x-slot:header>
+        Dashboard
+    </x-slot:header>
+    <div class="p-6 sm:p-8">
         <x-card>
             <x-slot:header>
                 <x-slot:title>
